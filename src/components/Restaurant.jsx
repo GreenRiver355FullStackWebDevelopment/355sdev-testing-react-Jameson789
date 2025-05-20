@@ -3,9 +3,12 @@ function Restaurant(props) {
   console.log(props);
   return (
     <div
-      data-cy={`${props.index} ${props.restaurant.name}`}
-      className="restaurant"
-    >
+  data-cy={`restaurant-${props.restaurant.name
+    .toLowerCase()
+    .replace(/\s+/g, "-")}`}
+  className="restaurant"
+>
+
       <h2>{props.restaurant.name}</h2>
       <ul>
         <li>{props.restaurant.address}</li>
